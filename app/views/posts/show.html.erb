@@ -16,16 +16,14 @@
 
 <h4>Add a Comment:</h4>
 <%= form_for @comment do |f| %>
-  Select a User:
-    <%= f.collection_select(:user_id, User.all, :id, :username, include_blank: 'new user' )%><br />
-
- <%= f.fields_for :user, User.new do |user_fields| %>
-
-    Or Create A New User:
-    <%= user_fields.text_field :username %>
-
-  <% end %>
-
+ <label> Select a User:</label>
+  
+  
+  
+ <label>Or Create A New User:</label> 
+ 
+ 
+ 
   Comment: <%=f.text_area :content%> <br />
   <%= f.hidden_field :post_id, :value => @post.id%>
   <%= f.submit "Create Comment"%>
